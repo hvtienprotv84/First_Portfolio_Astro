@@ -9,6 +9,7 @@
 - Astro
 - TypeScript
 - Tailwind CSS
+- Responsive Website và Mobile
 
 ```sh
 npm create astro@latest -- --template basics
