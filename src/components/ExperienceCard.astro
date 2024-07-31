@@ -1,0 +1,32 @@
+---
+interface Props {
+    date: string,
+    position: string,
+    company: string,
+    description: string,
+    description2: string,
+    description3: string,
+    side: string
+}
+
+const { date, position, company, description, description2, description3, side } = Astro.props;
+---
+
+<div class="relative w-full pb-6">
+    <div class="absolute ml-2 md:ml-0 bg-secondary w-4 h-4 rounded-full top-4 left-0 md:left-1/2 transform -translate-x-1/2"></div>
+    <div class={`relative ml-6 md:ml-0 bg-black/20 px-4 py-3 
+            ${side == 'right' ? 
+                "md:left-[52.5%] md:w-[47.5%] border-r-violet-500/50 border-r-[1px]" 
+                : 
+                "md:w-[47.5%] md:text-right md:border-l-violet-500/50 md:border-l-[1px] md:border-r-0 border-l-0 border-r-violet-500/50 border-r-[1px]"
+            }`}>
+        <span class="block mb-1 text-sm font-light leading-none text-gray-400 dark:text-gray-500">{date}</span>
+        <span class="text-secondary text-lg font-bold mb-1">{position}</span>
+        <h3 class="text-base font-semibold mb-1 text-gray-200">{company}</h3>
+        <p class="text-base mb-2 text-gray-400 dark:text-gray-400">{description}</p>
+        <p class="text-base mb-2 text-gray-400 dark:text-gray-400">{description2}</p>
+        <p class="text-base mb-2 text-gray-400 dark:text-gray-400">{description3}</p>
+        <slot />
+    </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+---
+interface Props {
+    title: string,
+    source: string,
+    description: string,
+}
+
+const { title, source, description } = Astro.props;
+---
+
+<div class="flex flex-col mb-12 md:w-[47.5%] mw-[47.5%] bg-black/20 rounded-xl">
+    <div class=" mb-2 md:mb-0 overflow-hidden rounded-t-xl">
+        <img class="hover:animate-zoomIn" src={source} alt={title}>
+    </div>
+    
+    <div class="flex flex-col px-6 py-4">
+        <h2 class="opacity-85 text-2xl font-semibold mb-3">{title}</h2>
+        <slot name="skills"/>	
+        <p class="text-base mb-4 text-gray-400 dark:text-gray-400">{description}</p>
+        <slot name="buttons"/>	
+    </div>
+</div>

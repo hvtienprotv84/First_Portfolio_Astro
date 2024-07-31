@@ -1,0 +1,208 @@
+---
+// Components
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro'
+import Experience from '../components/Experience.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
+import SkillPill from '../components/SkillPill.astro';
+import Projects from '../components/Projects.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Footer from '../components/Footer.astro';
+
+// Icons
+import PhpIcon from '../icons/PHPIcon.astro';
+import AngularIcon from '../icons/AngularIcon.astro';
+import TypeScriptIcon from '../icons/TypeScriptIcon.astro';
+import JavaScriptIcon from '../icons/JavaScriptIcon.astro';
+import HtmlIcon from '../icons/HTMLIcon.astro';
+import CssIcon from '../icons/CSSIcon.astro';
+import WordPressIcon from '../icons/WordPressIcon.astro';
+import SqlIcon from '../icons/SQLIcon.astro';
+import NextIcon from '../icons/NextIcon.astro';
+import TailwindIcon from '../icons/TailwindIcon.astro';
+import GitHubIcon from '../icons/GitHubIcon.astro';
+import VueIcon from '../icons/Vue.astro';
+
+// Images
+import ReactImage from '../assets/img/react.webp'
+import NextImage from '../assets/img/next.webp'
+import AngularImage from '../assets/img/angular.png'
+import ViteIcon from '../icons/ViteIcon.astro';
+import ReactIcon from '../icons/ReactIcon.astro';
+import Button from '../components/Button.astro';
+import PreviewIcon from '../icons/PreviewIcon.astro';
+import SourceIcon from '../icons/SourceIcon.astro';
+import AboutMe from '../components/AboutMe.astro';
+import GitIcon from '../icons/GitIcon.astro';
+import BashIcon from '../icons/BashIcon.astro';
+import LinuxIcon from '../icons/LinuxIcon.astro';
+---
+
+<Layout>
+	<Header />
+	<main class="mx-auto flex flex-col max-w-6xl px-6 h-full">
+		<Hero />
+		<Experience>
+			<ExperienceCard 
+				date="April 2024 - July 2024"
+				position="Thực Tập tại Công ty TNHH Giải Pháp và Công Nghệ"
+				company="Front-End Developer"
+				description='⫸ Công nghệ sử dụng: ReactJS và Tailwind CSS'
+				description2='⫸ Top 1 Sinh viên thực tập hoàn thành xuất sắc tasks được giao'
+				description3=''	
+				side="left"> 
+				<div class="flex flex-wrap justify-start md:justify-end">
+					<SkillPill color='bg-indigo-500/30' skill="ReactJS">
+						<ReactIcon class="w-4 h-4"/>
+					</SkillPill>
+					<SkillPill color='bg-yellow-500/30' skill="Tailwind CSS" >
+						<TailwindIcon class="w-4 h-4"/>
+					</SkillPill>
+					<SkillPill color='bg-amber-500/30' skill="Git" >
+						<GitIcon class="w-4 h-4"/>
+					</SkillPill>
+					<SkillPill color='bg-amber-500/30' skill="Github" >
+						<GitHubIcon class="w-4 h-4"/>
+					</SkillPill>
+				</div>
+			</ExperienceCard>
+        	<ExperienceCard 
+				date="2020 - 2024"
+				position="Technology University"
+				company="Information Technology"
+				description="⫸ Chuyên Ngành: Công Nghệ Phần Mềm"
+				description2="⫸ GPA: 8.5/10"
+				description3="⫸ Tốt Nghiệp Loại Giỏi Toàn Khóa Học."
+				side="right">
+				<div class="flex flex-wrap justify-start">
+				<SkillPill color='bg-orange-500/30' skill="HTML" >
+						<HtmlIcon class="w-3 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-sky-500/30' skill="CSS">
+						<CssIcon class="w-3 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-sky-500/30' skill="JavaScript">
+						<JavaScriptIcon class="w-3 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-blue-500/30' skill="TypeScript" >
+						<TypeScriptIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-sky-500/30' skill="ReactJS">
+						<ReactIcon class="w-3 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-sky-500/30' skill="Tailwind CSS">
+						<TailwindIcon class="w-3 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-blue-500/30' skill="NextJS" >
+						<NextIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-indigo-500/30' skill="PHP">
+						<PhpIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-red-500/30' skill="Angular" >
+						<AngularIcon class="w-5 h-5" />
+					</SkillPill>
+					<SkillPill color='bg-slate-500/30' skill="MySQL" >
+						<SqlIcon class="w-4 h-4" />
+					</SkillPill>					
+				</div>
+			</ExperienceCard>
+		</Experience>
+		<Projects>
+			<ProjectCard title='Portfolio ReactJS' source={ReactImage.src} description="Lorem ipsum odor amet, consectetuer adipiscing elit. Fames vitae convallis eu ex neque mus nunc consectetur? Varius odio montes sit magna consectetur pharetra.">
+				<div slot="skills" class="flex flex-wrap mb-2">
+					<SkillPill color='bg-blue-500/30' skill="ReactJS">
+						<ReactIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-yellow-500/30' skill="Tailwind CSS" >
+						<TailwindIcon class="w-4 h-4"/>
+					</SkillPill>
+					<SkillPill color='bg-pink-500/30' skill="Vite" >
+						<ViteIcon class="w-4 h-4" />
+					</SkillPill>	
+				</div>
+				<div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
+					<Button href="/" label="Source Code">
+						<SourceIcon class="w-4 h-4"></SourceIcon>
+					</Button>
+					<Button href="/" label="Preview">
+						<PreviewIcon class="w-4 h-4"></PreviewIcon>
+					</Button>		
+				</div>
+			</ProjectCard>
+			<ProjectCard title='Portfolio NextJS' source={NextImage.src} description="Lorem ipsum odor amet, consectetuer adipiscing elit. Fames vitae convallis eu ex neque mus nunc consectetur? Varius odio montes sit magna consectetur pharetra. ">
+				<div slot="skills" class="flex flex-wrap mb-2">
+					<SkillPill color='bg-slate-500/30' skill="NextJS">
+						<NextIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-red-500/30' skill="ReactJS" >
+						<ReactIcon class="w-4 h-4" />
+					</SkillPill>	
+					<SkillPill color='bg-red-500/30' skill="TypeScript" >
+						<TypeScriptIcon class="w-4 h-4" />
+					</SkillPill>	
+					<SkillPill color='bg-red-500/30' skill="Tailwind CSS" >
+						<TailwindIcon class="w-4 h-4" />
+					</SkillPill>	
+					<SkillPill color='bg-red-500/30' skill="Vite" >
+						<ViteIcon class="w-4 h-4" />
+					</SkillPill>	
+				</div>
+				<div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
+					<Button href="/" label="Source Code">
+						<SourceIcon class="w-4 h-4"></SourceIcon>
+					</Button>
+				</div>
+			</ProjectCard>
+			<ProjectCard title='Portfolio Angular' source={AngularImage.src} description="Lorem ipsum odor amet, consectetuer adipiscing elit. Fames vitae convallis eu ex neque mus nunc consectetur? Varius odio montes sit magna consectetur pharetra. ">
+				<div slot="skills" class="flex flex-wrap mb-2">
+					<SkillPill color='bg-slate-500/0' skill="Angular" >
+						<AngularIcon class="w-4 h-4" />
+					</SkillPill>
+					<SkillPill color='bg-yellow-500/30' skill="TypeScript">
+						<TypeScriptIcon class="w-4 h-4" />
+					</SkillPill>	
+				</div>
+				<div slot="buttons" class="flex flex-wrap sm:flex-nowrap gap-x-1">
+					<Button href="/" label="Source Code">
+						<SourceIcon class="w-4 h-4"></SourceIcon>
+					</Button>
+					<Button href="/" label="Preview">
+						<PreviewIcon class="w-4 h-4"></PreviewIcon>
+					</Button>
+				</div>
+			</ProjectCard>
+		</Projects>
+		<AboutMe/>
+		<Footer/>
+	</main>
+</Layout>
+
+<script>
+	document.addEventListener("touchstart", function() {}, true);
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const sections = document.querySelectorAll('section');
+		const navLinks = document.querySelectorAll('nav a');
+
+		function onScroll() {
+			let currentSection: string | null = '';
+			sections.forEach(section => {
+				const sectionTop = section.offsetTop;
+				if (window.scrollY >= sectionTop - 200) {
+					currentSection = section.getAttribute('id');
+				}
+			});
+
+			navLinks.forEach(link => {
+				link.classList.remove('text-secondary', 'scale-105', 'opacity-100', 'font-semibold');
+				if (link.getAttribute('href') === `#${currentSection}`) {
+					link.classList.add('text-secondary', 'scale-105', 'opacity-100', 'font-semibold');
+				}
+			});
+		}
+
+		window.addEventListener('scroll', onScroll);
+	});
+</script>

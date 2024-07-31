@@ -1,0 +1,13 @@
+---
+interface Props {
+    color: string,
+    skill: string
+}
+
+const { color, skill } = Astro.props;
+---
+
+<div class=`${color} flex items-center gap-x-2 focus:outline-none font-medium rounded-2xl text-sm px-2 py-1 me-2 mb-2 border-[1px] border-slate-500/20`>
+    <slot />
+    <span>{skill}</span>
+</div>

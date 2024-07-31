@@ -1,0 +1,50 @@
+---
+import LinkedInIcon from "../icons/LinkedInIcon.astro"
+import GitHubIcon from "../icons/GitHubIcon.astro"
+import FacebookIcon from "../icons/Facebook.astro"
+import ZaloIcon from "../icons/Zalo.astro"
+import ResumeIcon from "../icons/ResumeIcon.astro"
+import Button from "./Button.astro"
+import Carousel from "./Carousel.astro"
+---
+
+<section id="hero" class="md:pt-12 pt-4">
+    <div class="relative flex flex-col mb-8 lg:mb-52">
+        <div class="animate-slidein lg:absolute flex justify-center lg:pl-10 lg:pb-4 lg:py-0 right-3 top-0">
+            <img class=" z-10 w-80 md:w-[485px] hero-image " src="hero3.webp">      
+        </div>  
+        <div class="w-full lg:w-3/4 flex flex-col justify-center lg:mt-[100px] mb-[100px] -mt-14 md:z-10">
+            <h1 class="animate-slidein lg:animate-none md:leading-tight md:text-6xl text-4xl font-extrabold bg-gradient-to-r text-c mb-4 text-primary">
+                <span class="lg:opacity-0 lg:animate-slidein inline lg:block">Xin Chào, Tôi là</span>
+                <!--<span class="lg:opacity-0 lg:animate-slidein100 inline lg:block">abc</span>-->
+                <span class="lg:opacity-0 lg:animate-slidein200 text-secondary font-extrabold inline lg:block">Huỳnh Vĩnh Tiến</span>
+                <span class="lg:opacity-0 lg:animate-slidein300 inline lg:block">Software Engineer</span>
+                <!--
+                <span class="lg:opacity-0 lg:animate-slidein400 inline lg:block">abc <span class="text-secondary font-extrabold">abc</span>
+                <span class="lg:opacity-0 lg:animate-slidein500 inline lg:block"> abc<span class="text-secondary font-extrabold">abc</span></span>
+                -->
+            </h1>
+            <div class="flex flex-wrap sm:flex-nowrap gap-x-1">
+                <Button href="/" label="Facebook">
+                    <FacebookIcon class="w-5 h-5" color="#FFF"/>
+                </Button>
+                <Button href="https://github.com/hvtienprotv84" label="GitHub">
+                    <GitHubIcon class="w-5 h-5" color="#FFF"/>
+                </Button>
+                <Button href="https://zalo.me/0931103224" label="Zalo">
+                    <ZaloIcon class="w-5 h-5" color="#FFF"/>
+                </Button>
+                <Button href="/" label="Resume">
+                    <ResumeIcon class="w-5 h-5" color="#FFF"/>
+                </Button>
+            </div>
+        </div>  
+    </div>
+    <Carousel />
+</section>
+
+<style>
+    .hero-image {
+        mask-image: linear-gradient(to bottom, black 60%, transparent);
+    }
+</style>

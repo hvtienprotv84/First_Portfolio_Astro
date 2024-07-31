@@ -1,0 +1,60 @@
+---
+import Header from "../components/Header.astro"
+import '@fontsource-variable/onest';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="A Computer Engineer with more than 2 years in web development and solid skills in PHP" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo_1.png" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#161616" />
+		<meta name="color-scheme" content="dark">
+		<title>Tiến - First Portfolio - Astro</title>
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Huỳnh Vĩnh Tiến">
+		<meta property="og:description" content="A Computer Engineer with more than 2 years in web development and solid skills in PHP">
+		<meta property="og:image" content="/meta.png">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content="/">
+		<meta property="twitter:url" content="/">
+		<meta name="twitter:title" content="Huỳnh Vĩnh Tiến">
+		<meta name="twitter:description" content="A Computer Engineer with more than 2 years in web development and solid skills in PHP">
+		<meta name="twitter:image" content="/meta.png">
+	</head>
+	<body class="my-0 mx-auto text-white">
+		<!-- Gradient Background -->
+		<div class="fixed w-full h-dvh -z-10">
+			<div class="absolute bottom-0 left-[-15%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(124,58,237,.15),rgba(255,255,255,0))]"></div>
+			<div class="absolute bottom-0 right-[-15%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(124,58,237,.15),rgba(255,255,255,0))]"></div>
+		</div>
+		<slot />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+	</body>
+</html>
+
+<style is:global>
+	*, *::before, *::after {
+  		box-sizing: border-box;
+	}
+
+	html {
+		font-family: 'Onest Variable', sans-serif;
+		scroll-behavior: smooth;
+		scroll-padding-top: 75px;
+		background-color: #0e0b25;
+	}
+
+	::selection {
+		background: #6834C6;
+		color: #ffffff;
+	}
+</style>
